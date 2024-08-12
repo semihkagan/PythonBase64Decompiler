@@ -26,12 +26,12 @@ def read_and_decode_file(filename):
     return decoded_strings
 
 if __name__ == "__main__":
-    print(Fore.LIGHTYELLOW_EX + "Enter the name of the input file:")
+    print(Fore.LIGHTYELLOW_EX + "Enter the name of the input file or path:")
     filename = str(input(Fore.YELLOW + "> " + Fore.LIGHTWHITE_EX))
     if(filename == "" or filename == " "):
         filename = "input.txt"
     decoded_strings = read_and_decode_file(filename)
-# https://github.com/semihkagan tarafından yazılmıştır.
+
     print("\n---------------------------------------\n")
     for i, s in enumerate(decoded_strings):
         print(Fore.LIGHTBLUE_EX + "Decoded string" + Fore.BLUE + f" [{i}]: " + Fore.LIGHTWHITE_EX + f"{s}" + Fore.RESET)
@@ -39,4 +39,5 @@ if __name__ == "__main__":
 
     total_file = len(decoded_strings)
     print(Fore.LIGHTGREEN_EX + f"Decoding Syuccessfuly! , total decompiled texts({total_file}) ." + Fore.RESET)
+# https://github.com/semihkagan tarafından yazılmıştır.
 
