@@ -1,3 +1,5 @@
+# https:#github.com/semihkagan/PhpVisitorSaver
+# Lütfe#yorum satırlarını silmeyin :/ ❤️
 import base64
 from colorama import Fore
 
@@ -29,7 +31,7 @@ if __name__ == "__main__":
     if(filename == "" or filename == " "):
         filename = "input.txt"
     decoded_strings = read_and_decode_file(filename)
-
+# https://github.com/semihkagan tarafından yazılmıştır.
     print("\n---------------------------------------\n")
     for i, s in enumerate(decoded_strings):
         print(Fore.LIGHTBLUE_EX + "Decoded string" + Fore.BLUE + f" [{i}]: " + Fore.LIGHTWHITE_EX + f"{s}" + Fore.RESET)
