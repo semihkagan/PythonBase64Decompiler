@@ -16,7 +16,7 @@ def read_and_decode_file(filename):
         with open(filename, 'r') as file:
             for line in file:
                 line = line.strip()
-                if line:  # Boş satırları atla
+                if line and not line.startswith('//'):  # Boş satırları ve başında // olan atla
                     decoded_strings.append(decode_base64(line))
     except FileNotFoundError:
         return [Fore.RED + "File not found." + Fore.RESET]
