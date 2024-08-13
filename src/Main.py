@@ -19,6 +19,20 @@ encoder_title = '''
 '''
 load_title = encoder_title + "Source Code: \033[4mhttps://github.com/semihkagan/PythonBase64Decompiler\033[0m\n"
 
+example_inputfile = '''
+// Example Input File
+// This is a comment line 
+aGVsbG8gd29ybGQ=
+V2VsY29tZSB0byBteSBwcm9qZWN0
+
+Q2hlY2sgb3V0IG15IHJlcG9zaXRvcnk=
+
+RGV2ZWxvcGVkIGJ5IEdpdGhidWIhIHNlbWloa2FnYW4=
+R2l0aHViOiBzZW1paGthZ2Fu
+UGxlYXNlIGxpa2UgYW5kIHN0YXIgbXkgcmVwb3NpdG9yeQ==
+c2VndGlsZXkgc29sYW5kYW5k
+'''
+
 def decode_base64(encoded_str):
     try:
         decoded_bytes = base64.b64decode(encoded_str)
@@ -41,7 +55,12 @@ def read_and_decode_file(filename):
     
     return decoded_strings
 
+def create_and_write_to_file(filename, content):
+    with open(filename, "w", encoding="utf-8") as file:
+        file.write(content)
+
 if __name__ == "__main__":
+    create_and_write_to_file("input.txt",example_inputfile)
     while True:
      os.system("cls")
      print(load_title)
