@@ -30,7 +30,6 @@ Q2hlY2sgb3V0IG15IHJlcG9zaXRvcnk=
 RGV2ZWxvcGVkIGJ5IEdpdGhidWIhIHNlbWloa2FnYW4=
 R2l0aHViOiBzZW1paGthZ2Fu
 UGxlYXNlIGxpa2UgYW5kIHN0YXIgbXkgcmVwb3NpdG9yeQ==
-c2VndGlsZXkgc29sYW5kYW5k
 '''
 
 def decode_base64(encoded_str):
@@ -39,7 +38,7 @@ def decode_base64(encoded_str):
         return decoded_bytes.decode('utf-8', errors='ignore')
     except Exception as e:
         return f"Error decoding string: {e}"
-
+    
 def read_and_decode_file(filename):
     decoded_strings = []
     try:
@@ -64,19 +63,21 @@ if __name__ == "__main__":
     while True:
      os.system("cls")
      print(load_title)
-     print(Fore.LIGHTYELLOW_EX + "\nEnter the name of the input file or path:")
-     filename = str(input(Fore.YELLOW + "> " + Fore.LIGHTWHITE_EX))
-     if(filename == "" or filename == " "):
-         filename = "input.txt"
-     decoded_strings = read_and_decode_file(filename)
+     print(Fore.LIGHTYELLOW_EX + "\nEnter Base64 Code or,\nEnter the name of the input file or path:")
+     command = str(input(Fore.YELLOW + "> " + Fore.LIGHTWHITE_EX))
 
      print("\n---------------------------------------\n")
-     for i, s in enumerate(decoded_strings):
-         print(Fore.LIGHTBLUE_EX + "Decoded string" + Fore.BLUE + f" [{i}]: " + Fore.LIGHTWHITE_EX + f"{s}" + Fore.RESET)
+     if '.' in command:
+        decoded_strings = read_and_decode_file(command)
+        for i, s in enumerate(decoded_strings):
+            print(Fore.LIGHTBLUE_EX + "Decoded string" + Fore.BLUE + f" [{i}]: " + Fore.LIGHTWHITE_EX + f"{s}" + Fore.RESET)
+        total_texts = len(decoded_strings)
+     else:
+        print(Fore.LIGHTBLUE_EX + "Decoded string" + Fore.BLUE + f" [0]: " + Fore.LIGHTWHITE_EX + decode_base64(command) + Fore.RESET)
+        total_texts = 1
      print("\n---------------------------------------\n")
 
-     total_file = len(decoded_strings)
-     print(Fore.LIGHTGREEN_EX + f"Decoding Syuccessfuly! , total decompiled texts({total_file}) ." + Fore.RESET)
+     print(Fore.LIGHTGREEN_EX + f"Decoding Syuccessfuly! , total decompiled texts({total_texts}) ." + Fore.RESET)
      input("\nPlease press enter to continue...")
 
 # https://github.com/semihkagan tarafından yazılmıştır.
