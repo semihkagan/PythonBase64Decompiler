@@ -6,7 +6,7 @@ from colorama import Fore, init
 
 title = "Base64 Decoder - Github : semihkagan"
 os.system("@title " + title)
-init()
+init(autoreset=True)
 
 encoder_title = '''
   ____                   __ _  _     ______                     _           
@@ -48,9 +48,9 @@ def read_and_decode_file(filename):
                 if line and not line.startswith('//'):  # Boş satırları ve başında // olan atla
                     decoded_strings.append(decode_base64(line))
     except FileNotFoundError:
-        return [Fore.RED + "File not found." + Fore.RESET]
+        return [Fore.RED + "File not found."]
     except Exception as e:
-        return [Fore.RED +  f"Error reading file: {e}" + Fore.RESET]
+        return [Fore.RED +  f"Error reading file: {e}"]
     
     return decoded_strings
 
@@ -70,14 +70,14 @@ if __name__ == "__main__":
      if '.' in command:
         decoded_strings = read_and_decode_file(command)
         for i, s in enumerate(decoded_strings):
-            print(Fore.LIGHTBLUE_EX + "Decoded string" + Fore.BLUE + f" [{i}]: " + Fore.LIGHTWHITE_EX + f"{s}" + Fore.RESET)
+            print(Fore.LIGHTBLUE_EX + "Decoded string" + Fore.BLUE + f" [{i}]: " + Fore.LIGHTWHITE_EX + f"{s}")
         total_texts = len(decoded_strings)
      else:
-        print(Fore.LIGHTBLUE_EX + "Decoded string" + Fore.BLUE + f" [0]: " + Fore.LIGHTWHITE_EX + decode_base64(command) + Fore.RESET)
+        print(Fore.LIGHTBLUE_EX + "Decoded string" + Fore.BLUE + f" [0]: " + Fore.LIGHTWHITE_EX + decode_base64(command))
         total_texts = 1
      print("\n---------------------------------------\n")
 
-     print(Fore.LIGHTGREEN_EX + f"Decoding Syuccessfuly! , total decompiled texts({total_texts}) ." + Fore.RESET)
+     print(Fore.LIGHTGREEN_EX + f"Decoding Syuccessfuly! , total decompiled texts({total_texts}) .")
      input("\nPlease press enter to continue...")
 
 # https://github.com/semihkagan tarafından yazılmıştır.
