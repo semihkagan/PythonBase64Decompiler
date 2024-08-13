@@ -66,11 +66,17 @@ if __name__ == "__main__":
      print(Fore.LIGHTYELLOW_EX + "\nEnter Base64 Code or,\nEnter the name of the input file or path:")
      command = str(input(Fore.YELLOW + "> " + Fore.LIGHTWHITE_EX))
 
-     if command == 'exit' or 'close' or 'stop':
+     if command == 'exit' or  command == 'close' or  command == 'stop':
        exit(0)
        
      print("\n---------------------------------------\n")
      if '.' in command:
+        decoded_strings = read_and_decode_file(command)
+        for i, s in enumerate(decoded_strings):
+            print(Fore.LIGHTBLUE_EX + "Decoded string" + Fore.BLUE + f" [{i}]: " + Fore.LIGHTWHITE_EX + f"{s}")
+        total_texts = len(decoded_strings)
+     elif command.strip() == "":
+        command = "input.txt"
         decoded_strings = read_and_decode_file(command)
         for i, s in enumerate(decoded_strings):
             print(Fore.LIGHTBLUE_EX + "Decoded string" + Fore.BLUE + f" [{i}]: " + Fore.LIGHTWHITE_EX + f"{s}")
