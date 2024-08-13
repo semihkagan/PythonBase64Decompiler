@@ -66,6 +66,9 @@ if __name__ == "__main__":
      print(Fore.LIGHTYELLOW_EX + "\nEnter Base64 Code or,\nEnter the name of the input file or path:")
      command = str(input(Fore.YELLOW + "> " + Fore.LIGHTWHITE_EX))
 
+     if command == 'exit' or 'close' or 'stop':
+       exit(0)
+       
      print("\n---------------------------------------\n")
      if '.' in command:
         decoded_strings = read_and_decode_file(command)
