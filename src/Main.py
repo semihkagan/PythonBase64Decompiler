@@ -2,12 +2,13 @@
 # Lütfe#yorum satırlarını silmeyin :/ ❤️
 import base64
 import os
-from colorama import Fore
+from colorama import Fore, init
 
 title = "Base64 Decoder - Github : semihkagan"
 os.system("@title " + title)
+init()
 
-load_title = '''
+encoder_title = '''
   ____                   __ _  _     ______                     _           
  |  _ \                 / /| || |   |  ____|                   | |          
  | |_) | __ _ ___  ___ / /_| || |_  | |__   _ __   ___ ___   __| | ___ _ __ 
@@ -16,6 +17,7 @@ load_title = '''
  |____/ \__,_|___/\___|\___/  |_|   |______|_| |_|\___\___/ \__,_|\___|_|   v1.0.0
                                                                             
 '''
+load_title = encoder_title + "Source Code: \033[4mhttps://github.com/semihkagan/PythonBase64Decompiler\033[0m\n"
 
 def decode_base64(encoded_str):
     try:
