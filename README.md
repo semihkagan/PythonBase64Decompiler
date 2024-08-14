@@ -1,4 +1,4 @@
-#                💫 Base64 Decoder - Python Script 💫
+#💫 Base64 Decoder - Python Script 💫
 
 ![Base64 Decoder](https://raw.githubusercontent.com/semihkagan/PythonBase64Decompiler/main/assets/main.png)
 
@@ -63,3 +63,23 @@ Decoded string [0]: hello world
 Decoding Successfully! , total decompiled texts(1).
 Please press enter to continue...
 ```
+
+## Requirements 🛠️
+
+To run this script, you'll need the following library installed:
+
+- `colorama`: Used for colored text in the terminal.
+
+You can install it with the following command:
+
+```bash
+pip install colorama
+```
+
+## License 📜
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+Developed with ❤️ by [Semih Kagan](https://github.com/semihkagan).
