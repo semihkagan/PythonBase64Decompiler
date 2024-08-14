@@ -7,6 +7,7 @@ This project is a simple Python script designed to decode Base64 encoded text an
 ## Features ✨
 
 - Decode Base64 code entered by the user.
+- Simple console loging system.
 - Batch decode Base64 strings from a specified file.
 - Ignore comment lines (`//`) during the decoding process.
 - Simple and user-friendly interface. 😊
