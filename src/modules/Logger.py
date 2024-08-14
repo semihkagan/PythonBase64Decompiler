@@ -20,7 +20,7 @@ def _stack_file(file_path, target_folder):
         result = file_path 
 
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    zip_file_path = f"{result}_{timestamp}.zip"
+    zip_file_path = f"log_{timestamp}.zip"
     
     try:
         with zipfile.ZipFile(zip_file_path, 'w') as zipf:
