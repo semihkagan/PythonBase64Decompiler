@@ -3,10 +3,13 @@
 import base64
 import os
 from colorama import Fore, init
+from modules.Logger import Logger
 
 title = "Base64 Decoder - Github : semihkagan"
 os.system("@title " + title)
+
 init(autoreset=True)
+logger = Logger(stack_mode=True ,file_name="logs/latest.log")
 
 encoder_title = '''
   ____                   __ _  _     ______                     _           
@@ -62,31 +65,36 @@ if __name__ == "__main__":
     create_and_write_to_file("input.txt",example_inputfile)
     while True:
      os.system("cls")
-     print(load_title)
-     print(Fore.LIGHTYELLOW_EX + "\nEnter Base64 Code or,\nEnter the name of the input file or path:")
+     logger.log(load_title)
+     logger.log(Fore.LIGHTYELLOW_EX + "\nEnter Base64 Code or,\nEnter the name of the input file or path:")
      command = str(input(Fore.YELLOW + "> " + Fore.LIGHTWHITE_EX))
 
      if command == 'exit' or  command == 'close' or  command == 'stop':
+       logger.info("Program Closing...")
        exit(0)
+    
+     if command == 'clear':
+        if logger.clear():
+            logger.info(Fore.GREEN + "All oldest logs successfully cleared.")
        
-     print("\n---------------------------------------\n")
+     logger.log("\n---------------------------------------\n")
      if '.' in command:
         decoded_strings = read_and_decode_file(command)
         for i, s in enumerate(decoded_strings):
-            print(Fore.LIGHTBLUE_EX + "Decoded string" + Fore.BLUE + f" [{i}]: " + Fore.LIGHTWHITE_EX + f"{s}")
+            logger.log(Fore.LIGHTBLUE_EX + "Decoded string" + Fore.BLUE + f" [{i}]: " + Fore.LIGHTWHITE_EX + f"{s}")
         total_texts = len(decoded_strings)
      elif command.strip() == "":
         command = "input.txt"
         decoded_strings = read_and_decode_file(command)
         for i, s in enumerate(decoded_strings):
-            print(Fore.LIGHTBLUE_EX + "Decoded string" + Fore.BLUE + f" [{i}]: " + Fore.LIGHTWHITE_EX + f"{s}")
+            logger.log(Fore.LIGHTBLUE_EX + "Decoded string" + Fore.BLUE + f" [{i}]: " + Fore.LIGHTWHITE_EX + f"{s}")
         total_texts = len(decoded_strings)
      else:
-        print(Fore.LIGHTBLUE_EX + "Decoded string" + Fore.BLUE + f" [0]: " + Fore.LIGHTWHITE_EX + decode_base64(command))
+        logger.log(Fore.LIGHTBLUE_EX + "Decoded string" + Fore.BLUE + f" [0]: " + Fore.LIGHTWHITE_EX + decode_base64(command))
         total_texts = 1
-     print("\n---------------------------------------\n")
+     logger.log("\n---------------------------------------\n")
 
-     print(Fore.LIGHTGREEN_EX + f"Decoding Syuccessfuly! , total decompiled texts({total_texts}) .")
+     logger.log(Fore.LIGHTGREEN_EX + f"Decoding Syuccessfuly! , total decompiled texts({total_texts}) .")
      input("\nPlease press enter to continue...")
 
 # https://github.com/semihkagan tarafından yazılmıştır.
