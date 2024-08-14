@@ -1,6 +1,6 @@
 # Base64 Decoder - Python Script 🎉
 
-![Base64 Decoder](asset/main.png)
+![Base64 Decoder](https://raw.githubusercontent.com/semihkagan/PythonBase64Decompiler/main/assets/main.png)
 
 This project is a simple Python script designed to decode Base64 encoded text and display the decoded content. It also features batch decoding of Base64 strings from a file. 📄
 
