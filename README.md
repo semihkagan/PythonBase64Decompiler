@@ -47,3 +47,18 @@ Decoded string [0]: hello world
 Decoding Successfully! , total decompiled texts(1).
 Please press enter to continue...
 ```
+
+```
+> python Main.py
+
+Base64 Decoder - Github : semihkagan
+
+Enter Base64 Code or,
+Enter the name of the input file or path:
+> input.txt
+---------------------------------------
+Decoded string [0]: hello world
+
+Decoding Successfully! , total decompiled texts(1).
+Please press enter to continue...
+```
