@@ -1,4 +1,4 @@
-#💫 Base64 Decoder - Python Script 💫
+# 💫 Base64 Decoder - Python Script 💫
 
 ![Base64 Decoder](https://raw.githubusercontent.com/semihkagan/PythonBase64Decompiler/main/assets/main.png)
 
