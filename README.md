@@ -34,7 +34,7 @@ When the program runs, it will prompt the user to enter either a Base64 code or 
 ## Example Usage 💡
 
 ```
-> python base64_decoder.py
+> python Main.py
 
 Base64 Decoder - Github : semihkagan
 
