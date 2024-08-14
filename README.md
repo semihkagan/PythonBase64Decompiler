@@ -76,13 +76,15 @@ You can install it with the following command:
 pip install colorama
 ```
 
+## Screenshots 📷
+
+![Example 1](https://raw.githubusercontent.com/semihkagan/PythonBase64Decompiler/main/assets/example_code.png)
+![Example 2](https://raw.githubusercontent.com/semihkagan/PythonBase64Decompiler/main/assets/example_txt_file.png)
+
+
 ## License 📜
 
 This project is licensed under the [MIT License](LICENSE).
-
-## Screenshots 📷
-![Example 1](https://raw.githubusercontent.com/semihkagan/PythonBase64Decompiler/main/assets/example_code.png)
-![Example 2](https://raw.githubusercontent.com/semihkagan/PythonBase64Decompiler/main/assets/example_txt_file.png)
 
 ---
 
