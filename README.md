@@ -80,6 +80,10 @@ pip install colorama
 
 This project is licensed under the [MIT License](LICENSE).
 
+## Screenshots 📷
+![Example 1](https://raw.githubusercontent.com/semihkagan/PythonBase64Decompiler/main/assets/example_code.png)
+![Example 2](https://raw.githubusercontent.com/semihkagan/PythonBase64Decompiler/main/assets/example_txt_file.png)
+
 ---
 
 Developed with ❤️ by [Semih Kagan](https://github.com/semihkagan).
