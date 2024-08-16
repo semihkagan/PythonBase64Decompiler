@@ -11,7 +11,7 @@ os.system("@title " + title)
 init(autoreset=True)
 logger = Logger(stack_mode=True ,file_name="logs/latest.log")
 
-encoder_title = '''
+header_title = '''
   ____                   __ _  _     ______                     _           
  |  _ \                 / /| || |   |  ____|                   | |          
  | |_) | __ _ ___  ___ / /_| || |_  | |__   _ __   ___ ___   __| | ___ _ __ 
@@ -20,7 +20,7 @@ encoder_title = '''
  |____/ \__,_|___/\___|\___/  |_|   |______|_| |_|\___\___/ \__,_|\___|_|   v1.0.0
                                                                             
 '''
-load_title = encoder_title + "Source Code: \033[4mhttps://github.com/semihkagan/PythonBase64Decompiler\033[0m\n"
+title = header_title + "Source Code: \033[4mhttps://github.com/semihkagan/PythonBase64Decompiler\033[0m\n"
 
 example_inputfile = '''
 // Example Input File
@@ -65,7 +65,7 @@ if __name__ == "__main__":
     create_and_write_to_file("input.txt",example_inputfile)
     while True:
      os.system("cls")
-     logger.log(load_title)
+     logger.log(title)
      logger.log(Fore.LIGHTYELLOW_EX + "\nEnter Base64 Code or,\nEnter the name of the input file or path:")
      command = str(input(Fore.YELLOW + "> " + Fore.LIGHTWHITE_EX))
 
